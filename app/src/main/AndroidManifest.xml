@@ -133,13 +133,12 @@
         </activity>
         <!--framework/dispatchevent/滑动冲突-->
         <activity android:name=".framework.dispatchevent.ScrollConflictActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <!--basics/lifecycle-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity> <!-- basics/lifecycle -->
         <activity android:name=".basics.lifecycle.Lifecycle1Activity">
 
             <!-- <intent-filter> -->
@@ -150,7 +149,14 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".basics.lifecycle.Lifecycle2Activity" />
+        <!--component(组件化)-->
+        <activity android:name=".component.ComponentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".memoryleak.MemoryLeak3Activity">
 
             <!-- <intent-filter> -->

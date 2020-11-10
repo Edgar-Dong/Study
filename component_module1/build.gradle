@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'org.greenrobot.greendao'//greendao
 
 def config = rootProject.ext.android
 def appId = rootProject.ext.appId
@@ -9,7 +8,7 @@ android {
     buildToolsVersion config.buildToolsVersion
 
     defaultConfig {
-        applicationId appId["app"]
+        applicationId appId["component_module1"]
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
@@ -37,35 +36,17 @@ android {
     }
 }
 
-//greendao
-greendao {
-    schemaVersion 1
-}
-
 def library = rootProject.ext.dependencies
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation library.appcompat
-    implementation library.constraintlayout
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'org.greenrobot:greendao:3.3.0'//greendao
-    implementation 'com.airbnb.android:lottie:3.4.4'//三方动画库lottie
-    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'//数据库在线调试
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.20'//rxjava2
+    implementation library.appcompat
+    implementation library.material
+    implementation library.constraintlayout
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
     implementation 'com.alibaba:arouter-api:1.5.1'//arouter
     annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'//arouter
-
-    if (isModule){
-        //implementation project(path: ':component_module1')
-        implementation project(path: ':component_module2')
-    }
-
-    implementation 'org.java-websocket:Java-WebSocket:1.4.0'
-
-//    // debugImplementation because LeakCanary should only run in debug builds.
-//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
 }

@@ -1,0 +1,27 @@
+ext {
+    //false:组件化模式 true:集成模式
+    isModule = false
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.3",
+            minSdkVersion    : 16,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0"
+    ]
+
+    appId = [
+            "app"              : "com.android.example",
+            "component_module1": "com.android.component_module1",
+            "component_module2": "com.android.component_module2"
+    ]
+
+    appCompat = "1.2.0"
+    constraintLayout = "1.1.3"
+    material = "1.2.1"
+    dependencies = [
+            "appcompat"       : "androidx.appcompat:appcompat:${appCompat}",
+            "constraintlayout": "androidx.constraintlayout:constraintlayout:${constraintLayout}",
+            "material"        : "com.google.android.material:material:${material}"
+    ]
+}
