@@ -7,36 +7,51 @@
     android:orientation="vertical"
     tools:context=".framework.viewdrawing.ViewDrawingActivity">
 
-    <com.android.example.framework.viewdrawing.FlowLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <com.android.example.framework.viewdrawing.FlowLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <TextView
-            style="@style/text_flag_01"
-            android:text="Welcome" />
+<!--        <TextView-->
+<!--            style="@style/text_flag_01"-->
+<!--            android:text="Welcome" />-->
 
-        <TextView
-            style="@style/text_flag_01"
-            android:text="IT工程师" />
+<!--        <TextView-->
+<!--            style="@style/text_flag_01"-->
+<!--            android:text="IT工程师" />-->
 
-        <TextView
-            style="@style/text_flag_01"
-            android:text="学习ing" />
+<!--        <TextView-->
+<!--            style="@style/text_flag_01"-->
+<!--            android:text="学习ing" />-->
 
-        <TextView
-            style="@style/text_flag_01"
-            android:text="恋爱ing" />
+<!--        <TextView-->
+<!--            style="@style/text_flag_01"-->
+<!--            android:text="恋爱ing" />-->
 
-        <TextView
-            style="@style/text_flag_01"
-            android:text="挣钱ing" />
+<!--        <TextView-->
+<!--            style="@style/text_flag_01"-->
+<!--            android:text="挣钱ing" />-->
 
-        <TextView
-            style="@style/text_flag_01"
-            android:text="努力ing" />
+<!--        <TextView-->
+<!--            style="@style/text_flag_01"-->
+<!--            android:text="努力ing" />-->
 
-        <TextView
-            style="@style/text_flag_01"
-            android:text="I thick i can" />
-    </com.android.example.framework.viewdrawing.FlowLayout>
+<!--        <TextView-->
+<!--            style="@style/text_flag_01"-->
+<!--            android:text="I thick i can" />-->
+<!--    </com.android.example.framework.viewdrawing.FlowLayout>-->
+
+    <com.android.example.framework.viewdrawing.CirclePercentView
+        android:id="@+id/circlePercentView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:centerTextSize="16sp"
+        app:percent="45"
+        app:stripeWidth="15dp" />
+
+    <Button
+        android:id="@+id/changeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="change"
+        android:onClick="change" />
 </LinearLayout>
