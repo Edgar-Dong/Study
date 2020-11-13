@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.animation.AnimationActivity">
+
+    <Button
+        android:id="@+id/tweenAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画"
+        android:onClick="tweenAnimationClicked"/>
+
+    <Button
+        android:id="@+id/propertyAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="属性动画"
+        android:onClick="propertyAnimationClicked"/>
+
+    <Button
+        android:id="@+id/frameAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="帧动画"
+        android:onClick="frameAnimationClicked"/>
+</LinearLayout>

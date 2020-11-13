@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.animation.TweenAnimationActivity">
+
+    <Button
+        android:id="@+id/alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="alphaClicked"
+        android:text="透明"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="scaleClicked"
+        android:text="缩放"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alpha" />
+
+    <Button
+        android:id="@+id/rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="rotateClicked"
+        android:text="旋转"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scale" />
+
+    <Button
+        android:id="@+id/translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="translateClicked"
+        android:text="平移"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rotate" />
+
+    <Button
+        android:id="@+id/set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setClicked"
+        android:text="set"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/translate" />
+
+    <View
+        android:id="@+id/targetView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/grid_state_pressed"
+        app:layout_constraintLeft_toRightOf="@id/alpha"
+        app:layout_constraintTop_toTopOf="@id/alpha" />
+</androidx.constraintlayout.widget.ConstraintLayout>
