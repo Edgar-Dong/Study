@@ -13,7 +13,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.android.example.R;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 /**
  * @author:無忌

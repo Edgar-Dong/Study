@@ -19,7 +19,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.example.R;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

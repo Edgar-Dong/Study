@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 /**
  * @author:無忌

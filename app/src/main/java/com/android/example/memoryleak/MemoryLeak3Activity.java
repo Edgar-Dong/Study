@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.android.example.R;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 public class MemoryLeak3Activity extends AppCompatActivity {
 

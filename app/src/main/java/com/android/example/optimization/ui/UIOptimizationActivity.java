@@ -10,7 +10,7 @@ import android.view.FrameMetrics;
 import android.view.Window;
 
 import com.android.example.R;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 public class UIOptimizationActivity extends AppCompatActivity {
 

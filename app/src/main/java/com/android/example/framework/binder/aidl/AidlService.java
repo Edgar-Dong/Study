@@ -6,7 +6,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 import com.android.example.framework.binder.IMyAidlInterface;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 import com.android.example.util.AppUtil;
 
 public class AidlService extends Service {

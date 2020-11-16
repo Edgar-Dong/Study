@@ -13,7 +13,7 @@ import com.airbnb.lottie.LottieListener;
 import com.airbnb.lottie.LottieOnCompositionLoadedListener;
 import com.airbnb.lottie.LottieTask;
 import com.android.example.R;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 /**
  * @author:無忌

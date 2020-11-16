@@ -2,7 +2,7 @@ package com.android.example.hybird.webview;
 
 import android.webkit.JavascriptInterface;
 
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 /**
  * @author:無忌

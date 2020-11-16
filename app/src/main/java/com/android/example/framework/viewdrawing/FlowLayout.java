@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.android.example.R;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 public class DatabaseActivity extends AppCompatActivity {
     private static final String TAG = "DatabaseActivity";

@@ -22,16 +22,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-//        sourceSets {
-//            main {
-//                if (isModule) {
-//                    manifest.srcFile ''
-//                    java.srcDir ''
-//                } else {
-//                    java.srcDir ''
-//                }
-//            }
-//        }
+        sourceSets {
+            main {
+                if (isModule) {
+                    manifest.srcFile 'src/main/library/AndroidManifest.xml'
+                }
+            }
+        }
 
         //arouter
         javaCompileOptions {
@@ -47,10 +44,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    //resourcePrefix资源前缀限定，只能限定布局文件名和value资源的key，并不能限定图片资源的文件名
+    //给电商工程加上前缀约束shopping_
+    resourcePrefix "m2_"
 }
 
 def library = rootProject.ext.dependencies
@@ -60,10 +62,12 @@ dependencies {
     implementation library.appcompat
     implementation library.material
     implementation library.constraintlayout
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    testImplementation library.junit
+    androidTestImplementation library.ext_junit
+    androidTestImplementation library.espresso_core
 
-    implementation 'com.alibaba:arouter-api:1.5.1'//arouter
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'//arouter
+    api project(path: ':common')
+
+    implementation library.arouter_api//arouter
+    annotationProcessor library.arouter_compiler//arouter
 }

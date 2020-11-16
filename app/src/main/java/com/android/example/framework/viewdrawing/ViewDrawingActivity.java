@@ -2,12 +2,11 @@ package com.android.example.framework.viewdrawing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.view.View;
 
 import com.android.example.R;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 import java.util.Random;
 

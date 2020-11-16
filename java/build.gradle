@@ -1,8 +1,12 @@
 apply plugin: 'java-library'
 
+def library = rootProject.ext.dependencies
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation library.junit//junit
     implementation 'org.freemarker:freemarker:2.3.29'//freemarker
+    implementation 'com.google.code.gson:gson:2.8.6'//gson
 }
 
 sourceCompatibility = "1.8"

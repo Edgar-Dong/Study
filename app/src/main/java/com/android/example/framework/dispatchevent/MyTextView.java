@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatTextView;
 
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 
 /**
  * @author:無忌

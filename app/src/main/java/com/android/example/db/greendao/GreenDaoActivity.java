@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.android.example.R;
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 import com.android.example.ui.bitmap.BitmapActivity;
 
 import java.util.Arrays;

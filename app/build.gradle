@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'//greendao
+apply plugin: 'CheckResourcePrefixPlugin'//checkresourceconflict
 
 def config = rootProject.ext.android
 def appId = rootProject.ext.appId
@@ -31,10 +32,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    //resourcePrefix资源前缀限定，只能限定布局文件名和value资源的key，并不能限定图片资源的文件名
+    //给电商工程加上前缀约束shopping_
+    //resourcePrefix "app_"
 }
 
 //greendao
@@ -42,26 +48,36 @@ greendao {
     schemaVersion 1
 }
 
+checkResourceConfig {
+    // 是否开启插件
+    enabled false
+    // 运行完后自动使用默认浏览器打开html结果进行预览
+    autoPreviewResult true
+}
+
+
 def library = rootProject.ext.dependencies
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation library.appcompat
     implementation library.constraintlayout
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation library.junit
+    androidTestImplementation library.ext_junit
+    androidTestImplementation library.espresso_core
 
     implementation 'org.greenrobot:greendao:3.3.0'//greendao
     implementation 'com.airbnb.android:lottie:3.4.4'//三方动画库lottie
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'//数据库在线调试
     implementation 'io.reactivex.rxjava2:rxjava:2.2.20'//rxjava2
-    implementation 'com.alibaba:arouter-api:1.5.1'//arouter
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.1'//arouter
+    implementation library.arouter_api//arouter
+    annotationProcessor library.arouter_compiler//arouter
 
-    if (isModule){
-        //implementation project(path: ':component_module1')
+    if (isModule) {
+        implementation project(path: ':component_module1')
         implementation project(path: ':component_module2')
+    } else {
+        implementation project(path: ':common')
     }
 
     implementation 'org.java-websocket:Java-WebSocket:1.4.0'

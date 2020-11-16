@@ -4,7 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-import com.android.example.log.Logger;
+import com.android.example.common.log.Logger;
 import com.android.example.util.AppUtil;
 
 public class CustomsizeService extends Service {
