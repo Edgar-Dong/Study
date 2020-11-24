@@ -1,0 +1,81 @@
+FragmentPagerAdapter生命周期：
+step1@fragment1
+2020-11-24 11:51:22.421 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onAttach
+2020-11-24 11:51:22.421 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onCreate
+2020-11-24 11:51:22.421 31781-31781/com.android.example D/DefaultLogger: [SuperFragment2]=>>onAttach
+2020-11-24 11:51:22.421 31781-31781/com.android.example D/DefaultLogger: [SuperFragment2]=>>onCreate
+2020-11-24 11:51:22.422 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onCreateView
+2020-11-24 11:51:22.426 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onActivityCreated
+2020-11-24 11:51:22.426 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onStart
+2020-11-24 11:51:22.427 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onResume
+2020-11-24 11:51:22.427 31781-31781/com.android.example D/DefaultLogger: [SuperFragment2]=>>onCreateView
+2020-11-24 11:51:22.430 31781-31781/com.android.example D/DefaultLogger: [SuperFragment2]=>>onActivityCreated
+2020-11-24 11:51:22.430 31781-31781/com.android.example D/DefaultLogger: [SuperFragment2]=>>onStart
+2020-11-24 11:51:22.430 31781-31781/com.android.example D/DefaultLogger: [SuperFragment2]=>>onResume
+step2@fragment1->fragment2
+2020-11-24 11:51:30.207 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onAttach
+2020-11-24 11:51:30.208 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onCreate
+2020-11-24 11:51:30.210 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onCreateView
+2020-11-24 11:51:30.221 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onActivityCreated
+2020-11-24 11:51:30.222 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onStart
+2020-11-24 11:51:30.222 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onResume
+step3@fragment2->fragment3
+2020-11-24 11:51:34.815 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onPause
+2020-11-24 11:51:34.816 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onStop
+2020-11-24 11:51:34.817 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onDestroyView
+step4@fragment3->fragment1
+2020-11-24 11:51:45.024 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onCreateView
+2020-11-24 11:51:45.040 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onActivityCreated
+2020-11-24 11:51:45.040 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onStart
+2020-11-24 11:51:45.041 31781-31781/com.android.example D/DefaultLogger: [SuperFragment1]=>>onResume
+2020-11-24 11:51:45.386 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onPause
+2020-11-24 11:51:45.387 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onStop
+2020-11-24 11:51:45.388 31781-31781/com.android.example D/DefaultLogger: [SuperFragment3]=>>onDestroyView
+
+
+FragmentStatePagerAdapter生命周期：
+step1@fragment1
+2020-11-24 11:56:02.013 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onAttach
+2020-11-24 11:56:02.013 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onCreate
+2020-11-24 11:56:02.013 32014-32014/com.android.example D/DefaultLogger: [SuperFragment2]=>>onAttach
+2020-11-24 11:56:02.013 32014-32014/com.android.example D/DefaultLogger: [SuperFragment2]=>>onCreate
+2020-11-24 11:56:02.014 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onCreateView
+2020-11-24 11:56:02.017 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onActivityCreated
+2020-11-24 11:56:02.017 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onStart
+2020-11-24 11:56:02.017 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onResume
+2020-11-24 11:56:02.017 32014-32014/com.android.example D/DefaultLogger: [SuperFragment2]=>>onCreateView
+2020-11-24 11:56:02.019 32014-32014/com.android.example D/DefaultLogger: [SuperFragment2]=>>onActivityCreated
+2020-11-24 11:56:02.019 32014-32014/com.android.example D/DefaultLogger: [SuperFragment2]=>>onStart
+2020-11-24 11:56:02.019 32014-32014/com.android.example D/DefaultLogger: [SuperFragment2]=>>onResume
+step2@fragment1->fragment2
+2020-11-24 11:56:06.182 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onAttach
+2020-11-24 11:56:06.183 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onCreate
+2020-11-24 11:56:06.184 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onCreateView
+2020-11-24 11:56:06.195 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onActivityCreated
+2020-11-24 11:56:06.195 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onStart
+2020-11-24 11:56:06.195 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onResume
+step3@fragment2->fragment3
+2020-11-24 11:56:08.817 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onPause
+2020-11-24 11:56:08.817 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onStop
+2020-11-24 11:56:08.817 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onDestroyView
+2020-11-24 11:56:08.820 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onDestroy
+2020-11-24 11:56:08.820 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onDetach
+step4@fragment3->fragment1
+2020-11-24 11:56:12.989 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onAttach
+2020-11-24 11:56:12.990 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onCreate
+2020-11-24 11:56:12.992 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onCreateView
+2020-11-24 11:56:13.006 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onActivityCreated
+2020-11-24 11:56:13.006 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onStart
+2020-11-24 11:56:13.007 32014-32014/com.android.example D/DefaultLogger: [SuperFragment1]=>>onResume
+2020-11-24 11:56:13.357 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onPause
+2020-11-24 11:56:13.358 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onStop
+2020-11-24 11:56:13.358 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onDestroyView
+2020-11-24 11:56:13.364 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onDestroy
+2020-11-24 11:56:13.364 32014-32014/com.android.example D/DefaultLogger: [SuperFragment3]=>>onDetach
+
+结论：
+如上log可见FragmentPagerAdapter与FragmentStatePagerAdapter区别在于step3、step4，FragmentStatePagerAdapter中的Fragment
+会完全销毁而FragmentPagerAdapter只会销毁当前的View对象，所以对于数量固定的静态页面使用FragmentPagerAdapter；而对于分类较多动态加载
+的页面使用FragmentStatePagerAdapter。
+
+

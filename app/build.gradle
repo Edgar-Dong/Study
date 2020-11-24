@@ -62,6 +62,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation library.appcompat
     implementation library.constraintlayout
+    implementation library.design
     testImplementation library.junit
     androidTestImplementation library.ext_junit
     androidTestImplementation library.espresso_core

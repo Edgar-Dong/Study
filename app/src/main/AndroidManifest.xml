@@ -153,12 +153,19 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".basics.lifecycle.Lifecycle2Activity" />
+        <!-- basics/fragment/懒加载 -->
+        <activity android:name=".basics.fragment.LazyFragmentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!-- component(组件化) -->
         <activity android:name=".component.ComponentActivity">
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+            <!-- <intent-filter>-->
+            <!-- <action android:name="android.intent.action.MAIN" />-->
+            <!-- <category android:name="android.intent.category.LAUNCHER" />-->
+            <!-- </intent-filter>-->
         </activity>
         <activity android:name=".memoryleak.MemoryLeak3Activity">
             <!-- <intent-filter> -->
