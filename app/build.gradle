@@ -15,6 +15,7 @@ android {
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
         versionName config.versionName
+        flavorDimensions "versionCode"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -41,6 +42,24 @@ android {
     //resourcePrefix资源前缀限定，只能限定布局文件名和value资源的key，并不能限定图片资源的文件名
     //给电商工程加上前缀约束shopping_
     //resourcePrefix "app_"
+
+    productFlavors {
+        baidu {
+            applicationId "com.android.example"
+            versionCode 1
+            versionName "1.0"
+        }
+        xiaomi {
+            applicationId "com.android.example"
+            versionCode 1
+            versionName "1.0"
+        }
+        huawei {
+            applicationId "com.android.example"
+            versionCode 2
+            versionName "2.0"
+        }
+    }
 }
 
 //greendao
@@ -54,7 +73,6 @@ checkResourceConfig {
     // 运行完后自动使用默认浏览器打开html结果进行预览
     autoPreviewResult true
 }
-
 
 def library = rootProject.ext.dependencies
 
@@ -85,4 +103,18 @@ dependencies {
 
 //    // debugImplementation because LeakCanary should only run in debug builds.
 //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+}
+
+android.applicationVariants.all { variant ->
+    variant.outputs.all {
+        def date = new Date().format("yyyy_MM_dd_HHmmss", TimeZone.getTimeZone("GMT+08"))
+        if (variant.buildType.name.equals('debug')) {
+            //Study_debug_${versionName}_${channel}_${date}.apk
+            outputFileName = "study_release_${versionName}_${variant.productFlavors[0].name}_${date}.apk"
+        }
+        if (variant.buildType.name.equals('release')) {
+            //Study_release_${versionName}_${channel}_${date}.apk
+            outputFileName = "study_release_${versionName}_${variant.productFlavors[0].name}_${date}.apk"
+        }
+    }
 }
