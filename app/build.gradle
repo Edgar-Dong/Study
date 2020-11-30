@@ -99,6 +99,12 @@ dependencies {
         implementation project(path: ':common')
     }
 
+    implementation 'com.google.dagger:dagger:2.21'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.21'
+    implementation 'com.google.dagger:dagger-android:2.21'
+    implementation 'com.google.dagger:dagger-android-support:2.21'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.21'
+
     implementation 'org.java-websocket:Java-WebSocket:1.4.0'
 
 //    // debugImplementation because LeakCanary should only run in debug builds.
