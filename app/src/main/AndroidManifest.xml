@@ -38,10 +38,14 @@
         </activity>
         <!-- thirdlib/dagger/demo03(ContributesAndroidInjector的进一步优化) -->
         <activity android:name=".thirdlib.dagger.demo03.Dagger3Activity">
+            <!-- <intent-filter>-->
+            <!-- <action android:name="android.intent.action.MAIN" />-->
+            <!-- <category android:name="android.intent.category.LAUNCHER" />-->
+            <!-- </intent-filter>-->
+        </activity>
+        <activity android:name=".thirdlib.dagger.mvp.DaggerMvpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -6,6 +6,7 @@ import android.app.Application;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.android.example.thirdlib.dagger.demo02.DaggerAppComponent2;
 import com.android.example.thirdlib.dagger.demo03.DaggerAppComponent3;
+import com.android.example.thirdlib.dagger.mvp.component.DaggerMvpAppComponent;
 
 import javax.inject.Inject;
 
@@ -35,6 +36,7 @@ public class MainApp extends Application implements HasActivityInjector {
 
         DaggerAppComponent2.builder().build().inject(this);
         DaggerAppComponent3.builder().build().inject(this);
+        DaggerMvpAppComponent.builder().context(this).build().inject(this);
     }
 
     @Override
