@@ -3,6 +3,9 @@
 apply from:"config.gradle"
 
 buildscript {
+    ext {
+        kotlin_version = '1.3.72'
+    }
     repositories {
         google()
         jcenter()
@@ -17,6 +20,7 @@ buildscript {
         classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'//greendao
 
         classpath 'com.orzangleli:checkresourceconflict:0.0.2'//checkresourceconflict
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 

@@ -1,3 +1,4 @@
+include ':kotlin'
 include ':common'
 include ':component_module2'
 include ':component_module1'
