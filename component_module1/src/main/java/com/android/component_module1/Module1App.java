@@ -1,5 +1,6 @@
 package com.android.component_module1;
 
+import android.app.Activity;
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;

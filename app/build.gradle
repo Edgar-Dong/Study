@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'//greendao
 apply plugin: 'CheckResourcePrefixPlugin'//checkresourceconflict
+//apply plugin: 'kotlin-kapt'//for kotlin,java not use this
+apply plugin: 'dagger.hilt.android.plugin'
 
 def config = rootProject.ext.android
 def appId = rootProject.ext.appId
@@ -22,7 +24,7 @@ android {
         //arouter
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
+                arguments += [AROUTER_MODULE_NAME: project.getName()]
             }
         }
     }
@@ -88,7 +90,7 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.3.0'//greendao
     implementation 'com.airbnb.android:lottie:3.4.4'//三方动画库lottie
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'//数据库在线调试
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.20'//rxjava2
+
     implementation library.arouter_api//arouter
     annotationProcessor library.arouter_compiler//arouter
 
@@ -99,14 +101,18 @@ dependencies {
         implementation project(path: ':common')
     }
 
-    implementation 'com.google.dagger:dagger:2.21'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.21'
-    implementation 'com.google.dagger:dagger-android:2.21'
-    implementation 'com.google.dagger:dagger-android-support:2.21'
-    annotationProcessor 'com.google.dagger:dagger-android-processor:2.21'
-
-    implementation "io.reactivex.rxjava2:rxjava:2.1.20"
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //hilt begin
+    implementation "com.google.dagger:hilt-android:2.28-alpha"
+    //kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"//for kotlin
+    annotationProcessor "com.google.dagger:hilt-android-compiler:2.28-alpha"//for java
+    //hilt end
+
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     implementation 'org.java-websocket:Java-WebSocket:1.4.0'
 

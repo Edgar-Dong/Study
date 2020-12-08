@@ -22,43 +22,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- thirdlib/rxjava2/列表-->
-        <activity android:name=".thirdlib.rxjava2.Rxjava2ListActivity">
+        <!-- thirdlib/hilt-->
+        <activity android:name=".thirdlib.hilt.HiltActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- thirdlib/rxjava2/详情-->
-        <activity android:name=".thirdlib.rxjava2.Rxjava2DetailActivity"></activity>
-        <!-- thirdlib/dagger/demo01(dagger入门) -->
-        <activity android:name=".thirdlib.dagger.demo01.DaggerActivity">
-            <!-- <intent-filter>-->
-            <!-- <action android:name="android.intent.action.MAIN" />-->
-            <!-- <category android:name="android.intent.category.LAUNCHER" />-->
-            <!-- </intent-filter>-->
-        </activity>
-        <!-- thirdlib/dagger/demo02(AndroidInjector的使用) -->
-        <activity android:name=".thirdlib.dagger.demo02.Dagger2Activity">
-            <!-- <intent-filter>-->
-            <!-- <action android:name="android.intent.action.MAIN" />-->
-            <!-- <category android:name="android.intent.category.LAUNCHER" />-->
-            <!-- </intent-filter>-->
-        </activity>
-        <!-- thirdlib/dagger/demo03(ContributesAndroidInjector的进一步优化) -->
-        <activity android:name=".thirdlib.dagger.demo03.Dagger3Activity">
-            <!-- <intent-filter>-->
-            <!-- <action android:name="android.intent.action.MAIN" />-->
-            <!-- <category android:name="android.intent.category.LAUNCHER" />-->
-            <!-- </intent-filter>-->
-        </activity>
-        <activity android:name=".thirdlib.dagger.mvp.DaggerMvpActivity">
+        <!-- thirdlib/rxjava2/列表-->
+        <activity android:name=".thirdlib.rxjava2.Rxjava2ListActivity">
             <!--            <intent-filter>-->
             <!--                <action android:name="android.intent.action.MAIN" />-->
             <!--                <category android:name="android.intent.category.LAUNCHER" />-->
             <!--            </intent-filter>-->
         </activity>
+        <!-- thirdlib/rxjava2/详情-->
+        <activity android:name=".thirdlib.rxjava2.Rxjava2DetailActivity"></activity>
         <!-- database/三方库greendao -->
         <activity android:name=".db.greendao.GreenDaoActivity">
             <!-- <intent-filter> -->

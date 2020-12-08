@@ -1,6 +1,6 @@
 ext {
     //false:组件化模式 true:集成模式
-    isModule = true
+    isModule = false
     android = [
             compileSdkVersion: 29,
             buildToolsVersion: "29.0.3",

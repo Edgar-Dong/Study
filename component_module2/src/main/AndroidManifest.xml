@@ -11,9 +11,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Study">
         <activity android:name=".MainActivity">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <!-- thirdlib/dagger/demo01(dagger入门) -->
+        <activity android:name="com.android.component_module2.thirdlib.dagger.demo01.DaggerActivity">
+            <!-- <intent-filter>-->
+            <!-- <action android:name="android.intent.action.MAIN" />-->
+            <!-- <category android:name="android.intent.category.LAUNCHER" />-->
+            <!-- </intent-filter>-->
+        </activity>
+        <!-- thirdlib/dagger/demo02(AndroidInjector的使用) -->
+        <activity android:name="com.android.component_module2.thirdlib.dagger.demo02.Dagger2Activity">
+            <!-- <intent-filter>-->
+            <!-- <action android:name="android.intent.action.MAIN" />-->
+            <!-- <category android:name="android.intent.category.LAUNCHER" />-->
+            <!-- </intent-filter>-->
+        </activity>
+        <!-- thirdlib/dagger/demo03(ContributesAndroidInjector的进一步优化) -->
+        <activity android:name="com.android.component_module2.thirdlib.dagger.demo03.Dagger3Activity">
+            <!-- <intent-filter>-->
+            <!-- <action android:name="android.intent.action.MAIN" />-->
+            <!-- <category android:name="android.intent.category.LAUNCHER" />-->
+            <!-- </intent-filter>-->
+        </activity>
+        <activity android:name="com.android.component_module2.thirdlib.dagger.mvp.DaggerMvpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
