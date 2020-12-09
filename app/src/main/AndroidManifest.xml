@@ -24,11 +24,10 @@
         android:theme="@style/AppTheme">
         <!-- thirdlib/hilt-->
         <activity android:name=".thirdlib.hilt.HiltActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
         <!-- thirdlib/rxjava2/列表-->
         <activity android:name=".thirdlib.rxjava2.Rxjava2ListActivity">
@@ -172,6 +171,13 @@
         <activity android:name=".basics.lifecycle.Lifecycle2Activity" />
         <!-- basics/fragment/懒加载 -->
         <activity android:name=".basics.fragment.LazyFragmentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- basics/multithread/线程间通信 -->
+        <activity android:name=".basics.multithread.HandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
