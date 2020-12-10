@@ -40,4 +40,10 @@
     <string name="rx_BehaviorSubject">BehaviorSubject</string>
     <string name="rx_Completable">Completable</string>
     <string name="rx_Flowable">Flowable</string>
+    <string name="welcome">TextView</string>
+    <string name="button">+1</string>
+    <string name="button2">+2</string>
+    <string name="textview">Hello World</string>
+    <string name="imageButtonDescription" />
+    <string name="add">add</string>
 </resources>

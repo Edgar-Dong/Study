@@ -20,12 +20,18 @@ android {
         flavorDimensions "versionCode"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
 
         //arouter
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments += [AROUTER_MODULE_NAME: project.getName()]
             }
+        }
+
+        //databinding
+        dataBinding{
+            enabled true
         }
     }
 
@@ -113,6 +119,9 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //jetpack
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
     implementation 'org.java-websocket:Java-WebSocket:1.4.0'
 
