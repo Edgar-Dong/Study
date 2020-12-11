@@ -2,6 +2,7 @@ package com.android.example.jetpack;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.SavedStateViewModelFactory;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
@@ -17,7 +18,7 @@ public class DataBindingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_data_binding);
 
-        viewModel = ViewModelProviders.of(this).get(ViewModelWithLiveData.class);
+        viewModel = ViewModelProviders.of(this,new SavedStateViewModelFactory(getApplication(),this)).get(ViewModelWithLiveData.class);
         binding.setData(viewModel);
         binding.setLifecycleOwner(this);
     } 

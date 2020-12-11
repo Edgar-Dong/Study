@@ -1,6 +1,7 @@
 package com.android.example.jetpack;
 
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 
 /**
@@ -9,21 +10,25 @@ import androidx.lifecycle.ViewModel;
  * @description:
  */
 public class ViewModelWithLiveData extends ViewModel {
-    private MutableLiveData<Integer> likedNumber;
+    private static final String KEY_LIKED_NUMBER = "liked_number";
+    private SavedStateHandle handle;
+
+    public ViewModelWithLiveData(SavedStateHandle handle) {
+        this.handle = handle;
+    }
 
     public MutableLiveData<Integer> getLikedNumber() {
-        if (likedNumber == null) {
-            likedNumber = new MutableLiveData<>();
-            likedNumber.setValue(0);
+        if (!handle.contains(KEY_LIKED_NUMBER)) {
+            handle.set(KEY_LIKED_NUMBER, 0);
         }
-        return likedNumber;
+        return handle.getLiveData(KEY_LIKED_NUMBER,0);
     }
 
     public void addLikedNumber(int n) {
-        likedNumber.setValue(likedNumber.getValue() + n);
+        handle.set(KEY_LIKED_NUMBER, getLikedNumber().getValue() + n);
     }
 
-    public void add(){
-        likedNumber.setValue(likedNumber.getValue() + 1);
+    public void add() {
+        handle.set(KEY_LIKED_NUMBER, getLikedNumber().getValue() + 1);
     }
 }
