@@ -35,14 +35,20 @@ public class LiveDataActivity extends AppCompatActivity {
         imageButtonLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewModelWithLiveData.addLikedNumber(1);
+                viewModelWithLiveData.add(1);
             }
         });
         imageButtonDisLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewModelWithLiveData.addLikedNumber(-1);
+                viewModelWithLiveData.add(-1);
             }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        viewModelWithLiveData.save();
     }
 }
