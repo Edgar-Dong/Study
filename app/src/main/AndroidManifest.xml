@@ -22,12 +22,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- jetpack/databinding -->
-        <activity android:name=".jetpack.DataBindingActivity">
+        <!-- jetpack/计分器demo -->
+        <activity android:name=".jetpack.TeamScoreActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!-- jetpack/databinding -->
+        <activity android:name=".jetpack.DataBindingActivity">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
         <!-- jetpack/livedata -->
         <activity android:name=".jetpack.LiveDataActivity">
@@ -35,7 +42,8 @@
             <!--                <action android:name="android.intent.action.MAIN" />-->
             <!--                <category android:name="android.intent.category.LAUNCHER" />-->
             <!--            </intent-filter>-->
-        </activity> <!-- jetpack/viewmodel -->
+        </activity>
+        <!-- jetpack/viewmodel -->
         <activity android:name=".jetpack.ViewModelActivity">
 
             <!-- <intent-filter> -->

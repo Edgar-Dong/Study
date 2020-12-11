@@ -41,9 +41,16 @@
     <string name="rx_Completable">Completable</string>
     <string name="rx_Flowable">Flowable</string>
     <string name="welcome">TextView</string>
-    <string name="button">+1</string>
-    <string name="button2">+2</string>
     <string name="textview">Hello World</string>
     <string name="imageButtonDescription" />
     <string name="add">add</string>
+    <string name="textview1">Team A</string>
+    <string name="textview2">Team B</string>
+    <string name="scoreA">0</string>
+    <string name="scoreB">0</string>
+    <string name="button1">+1</string>
+    <string name="button2">+2</string>
+    <string name="button3">+3</string>
+    <string name="undoButton">undo</string>
+    <string name="resetButton">reset</string>
 </resources>
