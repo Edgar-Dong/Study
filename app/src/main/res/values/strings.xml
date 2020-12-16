@@ -59,4 +59,10 @@
     <string name="nav_home_button">Button</string>
     <string name="detail">Detail</string>
     <string name="nav_detail_button">Button</string>
+    <string name="one_fragment_button">进入</string>
+    <string name="one_fragment_textview">0</string>
+    <string name="two_fragment_textview">0</string>
+    <string name="two_fragment_button1">+1</string>
+    <string name="two_fragment_button2">-1</string>
+    <string name="two_fragment_button3">返回</string>
 </resources>
