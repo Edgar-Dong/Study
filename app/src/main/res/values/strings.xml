@@ -53,4 +53,10 @@
     <string name="button3">+3</string>
     <string name="undoButton">undo</string>
     <string name="resetButton">reset</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="nav_home_button">Button</string>
+    <string name="detail">Detail</string>
+    <string name="nav_detail_button">Button</string>
 </resources>

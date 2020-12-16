@@ -33,6 +33,9 @@ android {
         dataBinding{
             enabled true
         }
+
+        //multidex
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -122,6 +125,14 @@ dependencies {
 
     //jetpack
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    //navigation
+    implementation 'androidx.navigation:navigation-fragment:2.3.2'
+    implementation 'androidx.navigation:navigation-ui:2.3.2'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //multidex
+    implementation 'com.android.support:multidex:1.0.1'
 
     implementation 'org.java-websocket:Java-WebSocket:1.4.0'
 
