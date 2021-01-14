@@ -1,0 +1,49 @@
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
+
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+    implementation 'com.android.tools.lint:lint-api:26.3.2'
+    implementation 'com.android.tools.lint:lint-checks:26.3.2'
+}
+
+jar {
+    manifest {
+        attributes("Lint-Registry": "com.lintjar.example.CustomIssueRegistry")
+    }
+}
+
+configurations {
+    lintChecks
+}
+
+dependencies {
+    lintChecks files(jar)
+}
+
+//将lint.jar文件拷贝到某个目录下
+project.afterEvaluate {
+    tasks.all {
+        if (it.name.startsWith("jar")) {
+            it.doLast {
+                File oldFile = it.outputs.files.singleFile;
+                def newName = it.project.projectDir.getParent() + "/lint.jar";
+
+                if (oldFile.exists()) {
+                    java.nio.file.Path source = oldFile.toPath()
+                    java.nio.file.Path dest = new File(newName).toPath()
+                    Files.copy(source, dest, StandardCopyOption.REPLACE_EXISTING)
+                } else {
+                }
+            }
+        }
+    }
+}

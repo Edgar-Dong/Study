@@ -2,6 +2,31 @@ plugins {
     id 'com.android.library'
 }
 
+//将annotations模块中lint.jar文件拷贝到各个工程的build/intermediates/lint/文件夹下
+task copyLintJar(type: Copy) {
+    String lintPath = rootProject.rootDir.absolutePath + '/lint.jar'
+    File file = new File(lintPath)
+    if (file.exists()) {
+        from lintPath
+        into 'build/intermediates/lint/'
+    } else {
+        String path = file.getAbsolutePath()
+        project.logger.warn "${path}不存在"
+    }
+}
+
+project.afterEvaluate {
+    project.tasks.all {
+        String name = it.name;
+        if (name == 'preDebugBuild'
+                || name == 'preReleaseBuild'
+                //应对不同的product flavor
+                || (name.startsWith('pre') && ((name.endsWith('DebugBuild') || name.endsWith('ReleaseBuild'))))) {
+            it.dependsOn(copyLintJar)
+        }
+    }
+}
+
 def config = rootProject.ext.android
 
 android {
@@ -32,6 +57,10 @@ android {
 
 def library = rootProject.ext.dependencies
 
+configurations {
+    lintLibrary
+}
+
 dependencies {
 
     implementation library.appcompat
@@ -39,4 +68,6 @@ dependencies {
     testImplementation library.junit
     androidTestImplementation library.ext_junit
     androidTestImplementation library.espresso_core
+
+    lintLibrary project(path: ":lintjar", configuration: "lintChecks")
 }
