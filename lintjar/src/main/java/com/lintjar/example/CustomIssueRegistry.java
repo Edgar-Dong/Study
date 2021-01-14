@@ -24,7 +24,8 @@ public class CustomIssueRegistry extends IssueRegistry {
     @Override
     public List<Issue> getIssues() {
         return Arrays.asList(
-                LogDetector.ISSUE
+                LogDetector.ISSUE,
+                NewThreadDetector.ISSUE
         );
     }
 }

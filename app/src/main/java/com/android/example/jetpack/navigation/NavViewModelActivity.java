@@ -16,5 +16,12 @@ public class NavViewModelActivity extends AppCompatActivity {
         Log.e("---", "hah");
         Log.d("---", "hah");
         Log.w("---", "hah");
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        }).start();
     }
 }
