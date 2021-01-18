@@ -22,13 +22,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- jetpack/navigation/viewmodel数据共享 -->
-        <activity android:name=".jetpack.navigation.NavViewModelActivity">
+        <!-- 业务代码测试 -->
+        <activity android:name=".bussiness.BussinessActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!-- jetpack/navigation/viewmodel数据共享 -->
+        <activity android:name=".jetpack.navigation.NavViewModelActivity">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
         <!-- jetpack/navigation/入门 -->
         <activity android:name=".jetpack.navigation.NavigationActivity">

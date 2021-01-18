@@ -89,23 +89,26 @@ checkResourceConfig {
     autoPreviewResult true
 }
 
-def library = rootProject.ext.dependencies
+def implementationDependencies = rootProject.ext.dependencies
+def processors = rootProject.ext.annotationProcessor
+
+def androidTestImplementationDependencies = rootProject.ext.androidTestImplementationDependencies
+def testImplementationDependencies = rootProject.ext.testImplementationDependencies
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation library.appcompat
-    implementation library.constraintlayout
-    implementation library.design
-    testImplementation library.junit
-    androidTestImplementation library.ext_junit
-    androidTestImplementation library.espresso_core
+
+    implementationDependencies.each { k, v -> implementation v }
+    androidTestImplementationDependencies.each { k, v -> androidTestImplementation v }
+    testImplementationDependencies.each { k, v -> testImplementation v }
+
+    processors.each { k, v -> annotationProcessor v }
 
     implementation 'org.greenrobot:greendao:3.3.0'//greendao
-    implementation 'com.airbnb.android:lottie:3.4.4'//三方动画库lottie
+    implementation 'com.airbnb.android:lottie:3.4.4'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'//三方动画库lottie
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'//数据库在线调试
-
-    implementation library.arouter_api//arouter
-    annotationProcessor library.arouter_compiler//arouter
 
     if (isModule) {
         implementation project(path: ':component_module1')
@@ -124,8 +127,6 @@ dependencies {
     //hilt end
 
     implementation("com.squareup.okhttp3:okhttp:4.9.0")
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     //jetpack
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'

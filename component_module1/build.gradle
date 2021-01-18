@@ -59,19 +59,22 @@ android {
     resourcePrefix "m1_"
 }
 
-def library = rootProject.ext.dependencies
+def implementationDependencies = rootProject.ext.dependencies
+def processors = rootProject.ext.annotationProcessor
+def androidTestImplementationDependencies = rootProject.ext.androidTestImplementationDependencies
+def testImplementationDependencies = rootProject.ext.testImplementationDependencies
 
 dependencies {
 
-    implementation library.appcompat
-    implementation library.material
-    implementation library.constraintlayout
-    testImplementation library.junit
-    androidTestImplementation library.ext_junit
-    androidTestImplementation library.espresso_core
+    implementation implementationDependencies.appcompat
+    implementation implementationDependencies.material
+    implementation implementationDependencies.constraintlayout
+    testImplementation testImplementationDependencies.junit
+    androidTestImplementation androidTestImplementationDependencies.ext_junit
+    androidTestImplementation androidTestImplementationDependencies.espresso_core
 
     api project(path: ':common')
 
-    implementation library.arouter_api//arouter
-    annotationProcessor library.arouter_compiler//arouter
+    implementation implementationDependencies.arouter_api//arouter
+    annotationProcessor processors.arouter_compiler//arouter
 }
